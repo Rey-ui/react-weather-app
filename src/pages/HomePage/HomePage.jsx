@@ -5,6 +5,8 @@ import Loader from "../../components/Loader/Loader";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import UserCities from "../../components/UserCities/UserCities";
 import toast, { Toaster } from "react-hot-toast";
+import FilterAndSortCities from "../../components/FilterAndSortCities/FilterAndSortCities";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
 const HomePage = () => {
   const getLocalCitiesList = () => {
@@ -14,10 +16,12 @@ const HomePage = () => {
   };
   const [popularCities, setPopularCities] = useState([]);
   const [citiesList, setCitiesList] = useState(getLocalCitiesList);
+  const [filterName, setFilterName] = useState("");
+  const [sortBy, setSortBy] = useState("");
   const [popularCitiesLoader, setPopularCitiesLoader] = useState(false);
   const [citiesListLoader, setCitiesListLoader] = useState(false);
-  // const [cityName, setCityName] = useState("");
   const [error, setError] = useState(false);
+  const [switchIndicator, setswitchIndicator] = useState("asc");
   const popularCitiesNames = [
     "kyiv",
     "london",
@@ -83,6 +87,62 @@ const HomePage = () => {
       });
     });
   };
+  const handleRefreshWeather = async () => {
+    try {
+      setCitiesListLoader(true);
+      const results = await Promise.all(
+        citiesList.map((city) => {
+          return fetchWeather(city.name);
+        }),
+      );
+      setCitiesList(results);
+    } catch {
+      setError(true);
+    } finally {
+      setCitiesListLoader(false);
+    }
+  };
+  const filterCitiesList = citiesList.filter((city) => {
+    return city.name.toLowerCase().includes(filterName.toLowerCase());
+  });
+  const handleClearList = () => {
+    localStorage.removeItem("citiesArr");
+    setCitiesList([]);
+  };
+  const getSortValue = (city, option) => {
+    switch (option) {
+      case "cityTemperature":
+        return city.main.temp;
+      case "cityHumidity":
+        return city.main.humidity;
+      case "cityWindSpeed":
+        return city.wind.speed;
+      case "cityName":
+        return city.name;
+      default:
+        return null;
+    }
+  };
+  const handleSort = (option) => {
+    if (sortBy === option) {
+      setswitchIndicator((prev) => (prev === "asc" ? "desc" : "asc"));
+    } else {
+      setSortBy(option);
+      setswitchIndicator("asc");
+    }
+  };
+  const sortedCities = [...filterCitiesList].sort((a, b) => {
+    const valueA = getSortValue(a, sortBy);
+    const valueB = getSortValue(b, sortBy);
+    if (typeof valueA === "string") {
+      return switchIndicator == "asc"
+        ? valueA.localeCompare(valueB)
+        : valueB.localeCompare(valueA);
+    } else {
+      return switchIndicator == "asc" ? valueB - valueA : valueA - valueB;
+    }
+    return 0;
+  });
   return (
     <main>
       <section>
@@ -91,10 +151,20 @@ const HomePage = () => {
         {error && <ErrorMessage />}
       </section>
       <section>
+        <SectionTitle>Tracked Cities</SectionTitle>
+        <FilterAndSortCities
+          clearCities={handleClearList}
+          value={filterName}
+          change={setFilterName}
+          sort={handleSort}
+          sortValue={sortBy}
+          switchIndicator={switchIndicator}
+        />
         <UserCities
           submit={handleSearchCity}
-          cities={citiesList}
+          cities={sortedCities}
           onDelete={handledeleteCity}
+          refreshed={handleRefreshWeather}
         />
 
         {citiesListLoader && <Loader />}

@@ -15,4 +15,13 @@ async function fetchWeather(city) {
     throw error;
   }
 }
-export { fetchWeather };
+async function searchCityForecastWeather(query) {
+  const responce = await axios.get(`${BASE_URL}/forecast`, {
+    params: {
+      appid: API_KEY,
+      q: query,
+    },
+  });
+  return responce.data.list;
+}
+export { fetchWeather, searchCityForecastWeather };
