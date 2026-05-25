@@ -1,11 +1,11 @@
 import PopularCityCard from "../PopularCityCard/PopularCityCard";
-
+import css from "./PopularCitiesList.module.css";
 const PopularCitiesList = ({ cities }) => {
   return (
-    <ul>
+    <ul className={css.popularList}>
       {cities.map((city) => {
         return (
-          <li key={city.id}>
+          <li className={css.popularItem} key={city.id}>
             <PopularCityCard city={city} />
           </li>
         );

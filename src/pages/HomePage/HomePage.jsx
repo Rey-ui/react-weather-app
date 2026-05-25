@@ -145,30 +145,36 @@ const HomePage = () => {
   });
   return (
     <main>
-      <section>
-        {popularCities.length !== 0 && <PopularCities cities={popularCities} />}
-        {popularCitiesLoader && <Loader />}
-        {error && <ErrorMessage />}
+      <section className="section">
+        <div className="container">
+          {popularCities.length !== 0 && (
+            <PopularCities cities={popularCities} />
+          )}
+          {popularCitiesLoader && <Loader />}
+          {error && <ErrorMessage />}
+        </div>
       </section>
-      <section>
-        <SectionTitle>Tracked Cities</SectionTitle>
-        <FilterAndSortCities
-          clearCities={handleClearList}
-          value={filterName}
-          change={setFilterName}
-          sort={handleSort}
-          sortValue={sortBy}
-          switchIndicator={switchIndicator}
-        />
-        <UserCities
-          submit={handleSearchCity}
-          cities={sortedCities}
-          onDelete={handledeleteCity}
-          refreshed={handleRefreshWeather}
-        />
+      <section className="section">
+        <div className="container">
+          <SectionTitle>Tracked Cities</SectionTitle>
+          <FilterAndSortCities
+            clearCities={handleClearList}
+            value={filterName}
+            change={setFilterName}
+            sort={handleSort}
+            sortValue={sortBy}
+            switchIndicator={switchIndicator}
+          />
+          <UserCities
+            submit={handleSearchCity}
+            cities={sortedCities}
+            onDelete={handledeleteCity}
+            refreshed={handleRefreshWeather}
+          />
 
-        {citiesListLoader && <Loader />}
-        {error && <ErrorMessage />}
+          {citiesListLoader && <Loader />}
+          {error && <ErrorMessage />}
+        </div>
       </section>
       <Toaster position="top-center" reverseOrder={false} />
     </main>

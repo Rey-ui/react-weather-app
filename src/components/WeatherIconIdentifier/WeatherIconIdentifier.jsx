@@ -1,3 +1,5 @@
+import clsx from "clsx";
+import css from "./WeatherIconIdentifier.module.css";
 import { IoWarningOutline } from "react-icons/io5";
 import {
   WiCloud,
@@ -14,27 +16,28 @@ import {
   WiVolcano,
 } from "react-icons/wi";
 
-const WeatherIconIdentifier = ({ weather }) => {
+const WeatherIconIdentifier = ({ weather, iconClass }) => {
   const weatherArr = {
-    Clear: WiDaySunny,
-    Clouds: WiCloud,
-    Rain: WiDayRain,
-    Drizzle: WiRainWind,
-    Thunderstorm: WiDayLightning,
-    Snow: WiSnow,
-    Mist: WiWindy,
-    Smoke: WiSmog,
-    Haze: WiWindy,
-    Dust: WiSandstorm,
-    Fog: WiFog,
-    Sand: IoWarningOutline,
-    Ash: WiVolcano,
-    Squall: IoWarningOutline,
-    Tornado: WiTornado,
+    Clear: [WiDaySunny, "yellow"],
+    Clouds: [WiCloud, "blue"],
+    Rain: [WiDayRain, "blue"],
+    Drizzle: [WiRainWind, "blue"],
+    Thunderstorm: [WiDayLightning, "blue"],
+    Snow: [WiSnow, "blue"],
+    Mist: [WiWindy, "gray"],
+    Smoke: [WiSmog, "gray"],
+    Haze: [WiWindy, "gray"],
+    Dust: [WiSandstorm, "yellow"],
+    Fog: [WiFog, "gray"],
+    Sand: [IoWarningOutline, "yellow"],
+    Ash: [WiVolcano, "yellow"],
+    Squall: [IoWarningOutline, "gray"],
+    Tornado: [WiTornado, "gray"],
   };
-  const Icon = weatherArr[weather] || WiCloud;
+  const weatherColor = weatherArr[weather][1];
+  const Icon = weatherArr[weather][0] || WiCloud;
 
-  return <Icon />;
+  return <Icon className={clsx(iconClass, css[weatherColor])} />;
 };
 
 export default WeatherIconIdentifier;

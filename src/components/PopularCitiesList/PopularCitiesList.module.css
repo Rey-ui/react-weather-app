@@ -1,0 +1,17 @@
+.popularList {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+}
+.popularList::-webkit-scrollbar {
+  height: 10px;
+}
+.popularList::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+.popularList::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}

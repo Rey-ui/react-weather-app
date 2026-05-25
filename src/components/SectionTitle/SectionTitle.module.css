@@ -1,0 +1,9 @@
+.sectionTitle {
+  font-size: var(--section-title-desk);
+  color: var(--color-secondary);
+  font-weight: 100;
+  text-align: start;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}

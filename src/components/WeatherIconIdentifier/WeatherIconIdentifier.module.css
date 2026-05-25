@@ -1,0 +1,12 @@
+.yellow {
+  fill: var(--color-accent-warm);
+  stroke: var(--color-accent-warm);
+}
+.blue {
+  fill: var(--color-accent);
+  stroke: var(--color-accent);
+}
+.gray {
+  fill: var(--color-secondary);
+  stroke: var(--color-secondary);
+}
