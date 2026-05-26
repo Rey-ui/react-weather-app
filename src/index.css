@@ -51,7 +51,7 @@ body {
 }
 
 .section {
-  padding: 25px 0;
+  padding: 50px 0;
 }
 .container {
   padding: 0 20px;
@@ -62,10 +62,10 @@ body {
   margin: 0 auto;
 }
 .section-title {
-  font-size: var(--section-title-mob);
+  font-size: var(--section-title-desk);
   color: var(--color-secondary);
   text-align: start;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }

@@ -1,0 +1,94 @@
+.userCityCard {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 20px;
+  border-radius: var(--radius-main);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  transition: all 250ms;
+}
+.userCityCard:hover {
+  transform: scale(1.03);
+}
+.cityCardLink {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.cityCardUp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.cityCardName {
+  font-size: var(--h3-size-desk);
+  margin-right: 10px;
+  font-weight: 600;
+}
+.cityCardTemp {
+  font-size: 24px;
+  font-weight: 700;
+}
+.cityCardWeather {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 0.5px solid var(--color-border);
+  width: 100%;
+  gap: 18px;
+}
+.cityCardWeatherText {
+  font-size: 20px;
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+.cityCardWeatherSvg {
+  width: 50px;
+  height: 50px;
+}
+.cityCardInfo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cityCardItem {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  height: 35px;
+  border-radius: 100px;
+  gap: 8px;
+  padding: 6px 10px;
+}
+.cityCardItem span {
+  color: var(--color-secondary);
+  font-size: 16px;
+}
+.cityCardItem svg {
+  width: 20px;
+
+  height: 20px;
+}
+.cityCardItemHumid {
+  fill: var(--color-accent);
+}
+.cityCardItemWind {
+  stroke: var(--color-secondary);
+}
+.cityCardBtn {
+  padding: 8px;
+  border-radius: 20px;
+  background-color: inherit;
+  align-self: start;
+  transition: all 250ms;
+}
+.cityCardBtn:hover {
+  background-color: #f0f0f0;
+}
+.cityCardBtn svg {
+  width: 30px;
+  height: 30px;
+}

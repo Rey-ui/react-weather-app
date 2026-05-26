@@ -1,6 +1,7 @@
-import FilterCitiesList from "../FilterCitiesList/FilterCitiesList";
+import FilterCities from "../FilterCities/FilterCities";
 import SortCitiesList from "../SortCitiesList/SortCitiesList";
-
+import { VscSettings } from "react-icons/vsc";
+import css from "./FilterAndSortCities.module.css";
 const FilterAndSortCities = ({
   clearCities,
   value,
@@ -10,20 +11,28 @@ const FilterAndSortCities = ({
   switchIndicator,
 }) => {
   return (
-    <aside>
-      <h3>Filter & Sort</h3>
-      <div>
-        <div>
-          <FilterCitiesList value={value} change={change} />
+    <aside className={css.citiesBar}>
+      <h3 className={css.citiesBarTitle}>
+        <VscSettings /> <span>Filter & Sort</span>
+      </h3>
+      <div className={css.citiesBarContent}>
+        <div className={css.citiesBarFilters}>
+          <FilterCities value={value} change={change} />
+          <div>
+            <h3 className={css.citiesBarSortTitle}>Sort By</h3>
+
+            <SortCitiesList
+              sortValue={sortValue}
+              sort={sort}
+              switchIndicator={switchIndicator}
+            />
+          </div>
         </div>
-        <div>
-          <SortCitiesList
-            sortValue={sortValue}
-            sort={sort}
-            switchIndicator={switchIndicator}
-          />
-        </div>
-        <button type="button" onClick={clearCities}>
+        <button
+          className={css.citiesBarClearBtn}
+          type="button"
+          onClick={clearCities}
+        >
           Clear All
         </button>
       </div>

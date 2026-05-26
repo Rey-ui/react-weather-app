@@ -1,0 +1,25 @@
+.FilterCities {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.FilterCitiesTitle {
+  color: var(--color-secondary);
+  text-align: start;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.FilterCitiesInput {
+  border: 0.5px solid var(--color-border);
+  border-radius: 12px;
+  font-size: var(--text-big);
+  padding: 12px 22px;
+  width: 100%;
+  color: var(--color-secondary);
+  transition: all 250ms;
+}
+.FilterCitiesInput:hover,
+.FilterCitiesInput:focus {
+  border: 0.5px solid var(--color-accent);
+}

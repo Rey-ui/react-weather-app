@@ -1,0 +1,54 @@
+.citiesBar {
+  background-color: var(--color-surface);
+  padding: 20px;
+  border-radius: var(--radius-main);
+  box-shadow: var(--shadow-card);
+  max-width: 400px;
+  width: 400px;
+}
+.citiesBarTitle {
+  font-size: var(--h3-size-desk);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+.citiesBarTitle svg {
+  width: 30px;
+  height: 30px;
+}
+.citiesBarContent {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.citiesBarFilters {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.citiesBarSortTitle {
+  color: var(--color-secondary);
+  text-align: start;
+  margin-bottom: 18px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.citiesBarClearBtn {
+  width: 100%;
+  background-color: var(--color-surface);
+  padding: 14px 34px;
+  text-align: start;
+  font-size: var(--text-big);
+  color: rgb(218, 81, 81);
+  border: 0.5px solid rgb(218, 81, 81);
+  border-radius: 12px;
+  transition: all 250ms;
+}
+.citiesBarClearBtn:hover {
+  background-color: #ffdede;
+  color: rgb(212, 57, 57);
+  border: 0.5px solid rgb(212, 57, 57);
+}

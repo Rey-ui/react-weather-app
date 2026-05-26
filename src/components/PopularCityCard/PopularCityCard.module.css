@@ -29,7 +29,7 @@
 .popularCityCardTemp {
   font-size: var(--text-biggest);
   color: var(--color-primary);
-  font-weight: 600;
+  font-weight: 700;
 }
 .popularCityCardDown {
   display: flex;

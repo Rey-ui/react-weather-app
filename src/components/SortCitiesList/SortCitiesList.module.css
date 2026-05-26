@@ -1,3 +1,61 @@
 .active {
   background-color: brown;
 }
+.sortCitiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.sortCitiesItem {
+  width: 100%;
+}
+.sortCitiesBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-secondary);
+  padding: 8px 10px;
+  background-color: var(--color-surface);
+  border-radius: 12px;
+  width: 100%;
+  transition: all 250ms;
+}
+.sortCitiesBtn:hover {
+  background-color: var(--color-border);
+}
+.sortCitiesBtnContent {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.sortCitiesBtnContent svg {
+  width: 20px;
+  height: 20px;
+
+  stroke: var(--color-secondary);
+}
+.sortCitiesBtnText {
+  font-size: 18px;
+}
+.sortCitiesBtnSvg {
+  fill: var(--color-secondary);
+  stroke: none;
+  width: 20px;
+  height: 20px;
+}
+.sortCitiesBtnSvgFill {
+  width: 20px;
+  height: 20px;
+  fill: var(--color-secondary);
+  stroke: var(--color-secondary);
+}
+.active {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+/* .sortCitiesBtnContent svg.active {
+  fill: var(--color-surface);
+  stroke: var(--color-surface);
+} */

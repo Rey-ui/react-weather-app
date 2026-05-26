@@ -1,6 +1,8 @@
+import css from "./RefreshBtn.module.css";
+
 const RefreshBtn = ({ refreshed }) => {
   return (
-    <button type="button" onClick={refreshed}>
+    <button className={css.refreshBtn} type="button" onClick={refreshed}>
       Refresh
     </button>
   );

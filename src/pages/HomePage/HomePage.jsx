@@ -7,7 +7,7 @@ import UserCities from "../../components/UserCities/UserCities";
 import toast, { Toaster } from "react-hot-toast";
 import FilterAndSortCities from "../../components/FilterAndSortCities/FilterAndSortCities";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
-
+import css from "./HomePage.module.css";
 const HomePage = () => {
   const getLocalCitiesList = () => {
     const userCities = JSON.parse(localStorage.getItem("citiesArr"));
@@ -157,22 +157,23 @@ const HomePage = () => {
       <section className="section">
         <div className="container">
           <SectionTitle>Tracked Cities</SectionTitle>
-          <FilterAndSortCities
-            clearCities={handleClearList}
-            value={filterName}
-            change={setFilterName}
-            sort={handleSort}
-            sortValue={sortBy}
-            switchIndicator={switchIndicator}
-          />
-          <UserCities
-            submit={handleSearchCity}
-            cities={sortedCities}
-            onDelete={handledeleteCity}
-            refreshed={handleRefreshWeather}
-          />
-
-          {citiesListLoader && <Loader />}
+          <div className={css.userCitiesContent}>
+            <FilterAndSortCities
+              clearCities={handleClearList}
+              value={filterName}
+              change={setFilterName}
+              sort={handleSort}
+              sortValue={sortBy}
+              switchIndicator={switchIndicator}
+            />
+            <UserCities
+              submit={handleSearchCity}
+              cities={sortedCities}
+              onDelete={handledeleteCity}
+              refreshed={handleRefreshWeather}
+              citiesListLoader={citiesListLoader}
+            />
+          </div>
           {error && <ErrorMessage />}
         </div>
       </section>
