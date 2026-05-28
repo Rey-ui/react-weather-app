@@ -10,6 +10,7 @@ const CityForecast = () => {
   const [cityForecast, setCityForecast] = useState([]);
   const [loader, setloader] = useState(false);
   const [error, setError] = useState(false);
+
   useEffect(() => {
     async function getCityForecastWeather() {
       try {

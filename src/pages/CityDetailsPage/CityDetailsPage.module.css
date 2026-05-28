@@ -1,0 +1,69 @@
+.detailsBackBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  color: var(--color-surface);
+  /* border: 0.5px solid var(--color-border); */
+  background-color: var(--color-primary);
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  width: 150px;
+  transition: all 250ms;
+}
+.detailsBackBtn span {
+  color: var(--color-surface);
+}
+.detailsBackBtn svg {
+  stroke: var(--color-surface);
+  width: 30px;
+  height: 30px;
+}
+.detailsBackBtn:hover svg {
+  stroke: var(--color-accent);
+  /* background-color: #ebedff; */
+}
+.detailsBackBtn:hover {
+  color: var(--color-accent);
+  background-color: #ebedff;
+}
+.detailsBackBtn:hover span {
+  color: var(--color-accent);
+  /* background-color: #ebedff; */
+}
+.forecastBtn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 22px;
+  color: var(--color-surface);
+  /* border: 0.5px solid var(--color-border); */
+  background-color: var(--color-primary);
+  padding: 16px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  width: 200px;
+  transition: all 250ms;
+}
+.forecastBtn span {
+  font-size: 22px;
+  color: var(--color-surface);
+}
+.forecastBtn svg {
+  fill: var(--color-surface);
+  width: 30px;
+  height: 30px;
+}
+.forecastBtn:hover svg {
+  fill: var(--color-accent);
+}
+.forecastBtn:hover {
+  color: var(--color-accent);
+  background-color: #ebedff;
+}
+.forecastBtn:hover span {
+  color: var(--color-accent);
+}

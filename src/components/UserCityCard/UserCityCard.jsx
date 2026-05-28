@@ -4,7 +4,10 @@ import { FiTrash } from "react-icons/fi";
 import { LuWind } from "react-icons/lu";
 import { FaDroplet } from "react-icons/fa6";
 import css from "./UserCityCard.module.css";
-const UserCityCard = ({ city: { name, main, weather, wind }, onDelete }) => {
+const UserCityCard = ({
+  city: { id, name, main, weather, wind },
+  onDelete,
+}) => {
   return (
     <div className={css.userCityCard}>
       <NavLink className={css.cityCardLink} to={`/city/${name}`}>
@@ -39,7 +42,7 @@ const UserCityCard = ({ city: { name, main, weather, wind }, onDelete }) => {
       <button
         className={css.cityCardBtn}
         type="button"
-        onClick={() => onDelete(city.id)}
+        onClick={() => onDelete(id)}
       >
         <FiTrash />
       </button>

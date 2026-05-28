@@ -1,0 +1,40 @@
+/* .forecastCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  /* background-color: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-main); */
+
+.forecastCardDate {
+  font-size: var(--h3-size-desk);
+  font-weight: 600;
+  padding: 6px 24px;
+  border-radius: var(--radius-main);
+  background-color: aliceblue;
+}
+.forecastCardWeather {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: start;
+  gap: 15px;
+  font-size: 20px;
+}
+.forecastCardWeatherSvg {
+  width: 40px;
+  height: 40px;
+}
+.forecastCardTemps {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 20px;
+}
+.forecastCardTemp {
+  font-weight: 700;
+}
+.forecastCardTempSlash {
+  color: var(--color-accent-warm);
+}

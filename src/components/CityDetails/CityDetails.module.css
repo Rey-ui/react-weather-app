@@ -1,0 +1,166 @@
+.cityDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.cityDetailsHero {
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-main);
+  padding: 70px 40px;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+.heroMain {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.heroUp {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.heroMainTitle {
+  font-size: 32px;
+  font-weight: 600;
+}
+.heroMainTemp {
+  font-size: 72px;
+  /* letter-spacing: 2.04px; */
+  font-weight: 800;
+}
+.heroMainDown {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.heroMainMaxMin {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: var(--text-big);
+  color: var(--color-secondary);
+}
+.heroMainMaxMinTemp {
+  font-weight: 600;
+}
+.heroMainFeels {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: var(--text-big);
+  color: var(--color-secondary);
+  padding: 6px 12px;
+  border-radius: 100px;
+  background-color: #d3e2f5;
+}
+.heroMainFeelsName {
+}
+.heroMainFeelsTemp {
+  font-weight: 600;
+}
+.heroWeather {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.heroWeatherTitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.heroWeatherTitleText {
+  font-size: 64px;
+  font-weight: 400;
+}
+.heroWeatherTitleSvg {
+  width: 150px;
+  height: 150px;
+}
+.heroWeatherDesc {
+  font-size: 22px;
+  color: var(--color-secondary);
+  align-self: end;
+  padding: 8px 14px;
+  border-radius: 100px;
+  background-color: #d3e2f5;
+}
+.heroCoords {
+  /* display: none; */
+  position: absolute;
+  /* top: 160px; */
+  bottom: 10px;
+  right: 22px;
+  opacity: 0.15;
+  color: var(--color-accent-warm);
+  letter-spacing: 4px;
+  pointer-events: none;
+  font-size: 56px;
+  font-weight: 100;
+  /* transform: rotate(90deg); */
+}
+.cityDetailsList {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+.cityDetailsItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-main);
+}
+.cityDetailsItemSvgCont {
+  padding: 10px;
+  background-color: #e6e6e6;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cityDetailsItemSvgCont svg {
+  width: 25px;
+  height: 25px;
+}
+.cityDetailsItemSvg {
+  stroke: var(--color-accent);
+  /* fill: var(--color-accent); */
+}
+.cityDetailsItemSvgHumid {
+  fill: var(--color-accent);
+}
+.cityDetailsItemSvgPres {
+  stroke: rgb(177, 75, 224);
+  fill: rgb(177, 75, 224);
+}
+.cityDetailsItemSvgWind {
+  stroke: var(--color-secondary);
+}
+.cityDetailsItemSvgSea {
+  fill: var(--color-accent);
+}
+.cityDetailsItemSvgSun {
+  stroke: var(--color-accent-warm);
+}
+.cityDetailsItemSvgSun {
+}
+.cityDetailsItemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cityDetailsItemTitle {
+  font-size: var(--text-big);
+  color: var(--color-secondary);
+}
+.cityDetailsItemText {
+  font-weight: 600;
+  font-size: 20px;
+}

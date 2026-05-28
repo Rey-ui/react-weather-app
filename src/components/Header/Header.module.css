@@ -1,7 +1,8 @@
 .header {
   background-color: var(--color-surface);
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   border-bottom: 0.5px solid var(--color-border);
+  box-shadow: var(--shadow-card);
 }
 .headerWrapper {
   display: flex;
