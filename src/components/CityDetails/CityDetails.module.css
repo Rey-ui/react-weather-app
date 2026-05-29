@@ -1,13 +1,13 @@
 .cityDetails {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
 }
 .cityDetailsHero {
   background-color: var(--color-surface);
   box-shadow: var(--shadow-card);
   border-radius: var(--radius-main);
-  padding: 70px 40px;
+  padding: 50px 20px;
   padding-bottom: 100px;
   display: flex;
   align-items: flex-start;
@@ -17,32 +17,31 @@
 .heroMain {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 .heroUp {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 .heroMainTitle {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 600;
 }
 .heroMainTemp {
-  font-size: 72px;
-  /* letter-spacing: 2.04px; */
+  font-size: 36px;
   font-weight: 800;
 }
 .heroMainDown {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 15px;
 }
 .heroMainMaxMin {
   display: flex;
   gap: 6px;
   align-items: center;
-  font-size: var(--text-big);
+  font-size: var(--text-small);
   color: var(--color-secondary);
 }
 .heroMainMaxMinTemp {
@@ -50,75 +49,73 @@
 }
 .heroMainFeels {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   align-items: center;
-  font-size: var(--text-big);
+  font-size: var(--text-small);
   color: var(--color-secondary);
-  padding: 6px 12px;
+  padding: 4px 8px;
   border-radius: 100px;
   background-color: #d3e2f5;
 }
-.heroMainFeelsName {
-}
+
 .heroMainFeelsTemp {
   font-weight: 600;
 }
 .heroWeather {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 13px;
 }
 .heroWeatherTitle {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 10px;
 }
 .heroWeatherTitleText {
-  font-size: 64px;
+  font-size: 32px;
   font-weight: 400;
 }
 .heroWeatherTitleSvg {
-  width: 150px;
-  height: 150px;
+  width: 70px;
+  height: 60px;
 }
 .heroWeatherDesc {
-  font-size: 22px;
+  font-size: 16px;
   color: var(--color-secondary);
   align-self: end;
-  padding: 8px 14px;
+  padding: 4px 8px;
   border-radius: 100px;
   background-color: #d3e2f5;
 }
 .heroCoords {
-  /* display: none; */
   position: absolute;
-  /* top: 160px; */
   bottom: 10px;
   right: 22px;
   opacity: 0.15;
   color: var(--color-accent-warm);
   letter-spacing: 4px;
   pointer-events: none;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 100;
-  /* transform: rotate(90deg); */
 }
 .cityDetailsList {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 .cityDetailsItem {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 20px;
+  gap: 12px;
+  padding: 15px;
   background-color: var(--color-surface);
   box-shadow: var(--shadow-card);
   border-radius: var(--radius-main);
 }
 .cityDetailsItemSvgCont {
-  padding: 10px;
+  padding: 8px;
   background-color: #e6e6e6;
   border-radius: 100px;
   display: flex;
@@ -126,8 +123,8 @@
   justify-content: center;
 }
 .cityDetailsItemSvgCont svg {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
 .cityDetailsItemSvg {
   stroke: var(--color-accent);
@@ -149,18 +146,192 @@
 .cityDetailsItemSvgSun {
   stroke: var(--color-accent-warm);
 }
-.cityDetailsItemSvgSun {
-}
+
 .cityDetailsItemContent {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 .cityDetailsItemTitle {
-  font-size: var(--text-big);
+  font-size: var(--text-general);
   color: var(--color-secondary);
 }
 .cityDetailsItemText {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
 }
+/* ================================ */
+@media screen and (min-width: 768px) {
+  .cityDetails {
+    gap: 25px;
+  }
+  .cityDetailsHero {
+    padding: 60px 30px;
+    padding-bottom: 90px;
+  }
+  .heroMain {
+    gap: 10px;
+  }
+  .heroUp {
+    gap: 18px;
+  }
+  .heroMainTitle {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .heroMainTemp {
+    font-size: 64px;
+    /* letter-spacing: 2.04px; */
+    font-weight: 800;
+  }
+  .heroMainDown {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .heroMainMaxMin {
+    font-size: var(--text-general);
+  }
+
+  .heroMainFeels {
+    gap: 8px;
+    font-size: var(--text-general);
+    padding: 6px 12px;
+  }
+  .heroWeather {
+    display: flex;
+
+    flex-direction: column;
+    gap: 15px;
+  }
+  .heroWeatherTitle {
+    gap: 18px;
+    flex-direction: row;
+    align-items: center;
+  }
+  .heroWeatherTitleText {
+    font-size: 42px;
+    font-weight: 400;
+  }
+  .heroWeatherTitleSvg {
+    width: 100px;
+    height: 100px;
+  }
+  .heroWeatherDesc {
+    font-size: 20px;
+    align-self: end;
+    padding: 6px 12px;
+    border-radius: 100px;
+  }
+  .heroCoords {
+    font-size: 40px;
+  }
+  .cityDetailsList {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .cityDetailsItem {
+    gap: 15px;
+    padding: 20px;
+  }
+  .cityDetailsItemSvgCont {
+    padding: 8px;
+  }
+  .cityDetailsItemSvgCont svg {
+    width: 20px;
+    height: 20px;
+  }
+  .cityDetailsItemContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .cityDetailsItemTitle {
+    font-size: var(--text-big);
+  }
+  .cityDetailsItemText {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .cityDetails {
+    gap: 30px;
+  }
+  .cityDetailsHero {
+    padding: 70px 40px;
+    padding-bottom: 100px;
+  }
+  .heroMain {
+    gap: 12px;
+  }
+  .heroUp {
+    gap: 20px;
+  }
+  .heroMainTitle {
+    font-size: 32px;
+  }
+  .heroMainTemp {
+    font-size: 72px;
+  }
+  .heroMainDown {
+    gap: 18px;
+  }
+  .heroMainMaxMin {
+    gap: 6px;
+
+    font-size: var(--text-big);
+  }
+
+  .heroMainFeels {
+    font-size: var(--text-big);
+
+    padding: 6px 12px;
+  }
+
+  .heroWeather {
+    gap: 20px;
+  }
+  .heroWeatherTitle {
+    gap: 20px;
+  }
+  .heroWeatherTitleText {
+    font-size: 64px;
+  }
+  .heroWeatherTitleSvg {
+    width: 150px;
+    height: 150px;
+  }
+  .heroWeatherDesc {
+    font-size: 22px;
+
+    padding: 8px 14px;
+  }
+  .heroCoords {
+    font-size: 56px;
+  }
+  .cityDetailsList {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+  .cityDetailsItem {
+    gap: 15px;
+    padding: 20px;
+  }
+  .cityDetailsItemSvgCont {
+    padding: 10px;
+  }
+  .cityDetailsItemSvgCont svg {
+    width: 25px;
+    height: 25px;
+  }
+  .cityDetailsItemContent {
+    gap: 8px;
+  }
+  .cityDetailsItemTitle {
+    font-size: var(--text-big);
+  }
+  .cityDetailsItemText {
+    font-size: 20px;
+  }
+}
+/* ================================ */

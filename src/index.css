@@ -1,14 +1,14 @@
 @import url("./reset.css");
 
 :root {
-  --color-bg: #f5f5f0; /* тёплый почти белый */
+  --color-bg: #f5f5f0;
   --color-surface: #ffffff;
-  --color-primary: #1c1c1e; /* почти чёрный */
+  --color-primary: #1c1c1e;
   --color-secondary: #8e8e93;
-  --color-accent: #3a7bd5; /* спокойный синий — небо */
-  --color-accent-warm: #e8a020; /* янтарный — солнце */
+  --color-accent: #3a7bd5;
+  --color-accent-warm: #e8a020;
   --color-border: #e0e0db;
-  --radius-main: 16px; /* мягкие скруглённые углы */
+  --radius-main: 16px;
   --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
 
   /* h1 */
@@ -51,21 +51,39 @@ body {
 }
 
 .section {
-  padding: 40px 0;
+  padding: 25px 0;
 }
 .container {
   padding: 0 20px;
   position: relative;
   max-width: 375px;
-  max-width: 1280px;
   height: 100%;
   margin: 0 auto;
 }
 .section-title {
-  font-size: var(--section-title-desk);
+  font-size: var(--section-title-mob);
   color: var(--color-secondary);
   text-align: start;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
+/* ================================ */
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 30px 0;
+  }
+  .container {
+    padding: 0 20px;
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section {
+    padding: 40px 0;
+  }
+  .container {
+    max-width: 1280px;
+  }
+}
+/* ================================ */

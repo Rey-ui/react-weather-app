@@ -1,16 +1,7 @@
-/* .forecastCard {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
-  /* background-color: var(--color-surface);
-  box-shadow: var(--shadow-card);
-  border-radius: var(--radius-main); */
-
 .forecastCardDate {
-  font-size: var(--h3-size-desk);
+  font-size: var(--h3-size-mob);
   font-weight: 600;
-  padding: 6px 24px;
+  padding: 6px 18px;
   border-radius: var(--radius-main);
   background-color: aliceblue;
 }
@@ -19,18 +10,18 @@
   align-items: center;
   justify-content: flex-start;
   text-align: start;
-  gap: 15px;
-  font-size: 20px;
+  gap: 8px;
+  font-size: 16px;
 }
 .forecastCardWeatherSvg {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
 }
 .forecastCardTemps {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .forecastCardTemp {
   font-weight: 700;
@@ -38,3 +29,39 @@
 .forecastCardTempSlash {
   color: var(--color-accent-warm);
 }
+/* ================================ */
+@media screen and (min-width: 768px) {
+  .forecastCardDate {
+    font-size: var(--h3-size-tab);
+
+    padding: 6px 20px;
+  }
+  .forecastCardWeather {
+    gap: 12px;
+    font-size: 18px;
+  }
+  .forecastCardWeatherSvg {
+    width: 30px;
+    height: 30px;
+  }
+  .forecastCardTemps {
+    gap: 6px;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .forecastCardDate {
+    font-size: var(--h3-size-desk);
+
+    padding: 6px 24px;
+  }
+  .forecastCardWeather {
+    gap: 15px;
+    font-size: 20px;
+  }
+  .forecastCardWeatherSvg {
+    width: 40px;
+    height: 40px;
+  }
+}
+/* ================================ */

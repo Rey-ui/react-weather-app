@@ -34,7 +34,7 @@ const WeatherIconIdentifier = ({ weather, iconClass }) => {
     Squall: [IoWarningOutline, "gray"],
     Tornado: [WiTornado, "gray"],
   };
-  const weatherColor = weatherArr[weather][1];
+  const weatherColor = weatherArr[weather][1] || "gray";
   const Icon = weatherArr[weather][0] || WiCloud;
 
   return <Icon className={clsx(iconClass, css[weatherColor])} />;

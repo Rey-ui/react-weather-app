@@ -1,10 +1,7 @@
-.active {
-  background-color: brown;
-}
 .sortCitiesList {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
   width: 100%;
 }
 
@@ -16,7 +13,7 @@
   justify-content: space-between;
   align-items: center;
   color: var(--color-secondary);
-  padding: 8px 10px;
+  padding: 6px 8px;
   background-color: var(--color-surface);
   border-radius: 12px;
   width: 100%;
@@ -27,27 +24,27 @@
 }
 .sortCitiesBtnContent {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
 }
 .sortCitiesBtnContent svg {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 
   stroke: var(--color-secondary);
 }
 .sortCitiesBtnText {
-  font-size: 18px;
+  font-size: 16px;
 }
 .sortCitiesBtnSvg {
   fill: var(--color-secondary);
   stroke: none;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 .sortCitiesBtnSvgFill {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   fill: var(--color-secondary);
   stroke: var(--color-secondary);
 }
@@ -55,7 +52,49 @@
   background-color: var(--color-primary);
   color: var(--color-surface);
 }
-/* .sortCitiesBtnContent svg.active {
-  fill: var(--color-surface);
-  stroke: var(--color-surface);
-} */
+/* ================================ */
+@media screen and (min-width: 768px) {
+  .sortCitiesList {
+    gap: 15px;
+  }
+  .sortCitiesBtn {
+    padding: 8px 10px;
+  }
+
+  .sortCitiesBtnContent {
+    gap: 12px;
+  }
+  .sortCitiesBtnContent svg {
+    width: 20px;
+    height: 20px;
+  }
+  .sortCitiesBtnSvg {
+    width: 20px;
+    height: 20px;
+  }
+  .sortCitiesBtnSvgFill {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .sortCitiesBtnContent {
+    gap: 12px;
+  }
+  .sortCitiesBtnContent svg {
+    width: 25px;
+    height: 25px;
+  }
+  .sortCitiesBtnText {
+    font-size: 18px;
+  }
+  .sortCitiesBtnSvg {
+    width: 20px;
+    height: 20px;
+  }
+  .sortCitiesBtnSvgFill {
+    width: 20px;
+    height: 20px;
+  }
+}
+/* ================================ */

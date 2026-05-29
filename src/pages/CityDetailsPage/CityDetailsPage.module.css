@@ -2,15 +2,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 20px;
+  font-size: 18px;
   color: var(--color-surface);
-  /* border: 0.5px solid var(--color-border); */
   background-color: var(--color-primary);
-  padding: 14px 22px;
+  padding: 12px 18px;
   border-radius: 12px;
   font-weight: 600;
-  margin-bottom: 25px;
-  width: 150px;
+  margin-bottom: 20px;
+  width: 120px;
   transition: all 250ms;
 }
 .detailsBackBtn span {
@@ -18,12 +17,11 @@
 }
 .detailsBackBtn svg {
   stroke: var(--color-surface);
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 .detailsBackBtn:hover svg {
   stroke: var(--color-accent);
-  /* background-color: #ebedff; */
 }
 .detailsBackBtn:hover {
   color: var(--color-accent);
@@ -31,31 +29,29 @@
 }
 .detailsBackBtn:hover span {
   color: var(--color-accent);
-  /* background-color: #ebedff; */
 }
 .forecastBtn {
   display: flex;
   align-items: center;
-  gap: 15px;
-  font-size: 22px;
+  gap: 10px;
+  font-size: 20px;
   color: var(--color-surface);
-  /* border: 0.5px solid var(--color-border); */
   background-color: var(--color-primary);
-  padding: 16px 28px;
+  padding: 14px 20px;
   border-radius: 12px;
   font-weight: 600;
-  margin-bottom: 25px;
-  width: 200px;
+  margin-bottom: 20px;
+  width: 150px;
   transition: all 250ms;
 }
 .forecastBtn span {
-  font-size: 22px;
+  font-size: 18px;
   color: var(--color-surface);
 }
 .forecastBtn svg {
   fill: var(--color-surface);
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 .forecastBtn:hover svg {
   fill: var(--color-accent);
@@ -67,3 +63,34 @@
 .forecastBtn:hover span {
   color: var(--color-accent);
 }
+/* ================================ */
+@media screen and (min-width: 1280px) {
+  .detailsBackBtn {
+    gap: 10px;
+    font-size: 20px;
+    padding: 14px 22px;
+    margin-bottom: 25px;
+    width: 150px;
+  }
+
+  .detailsBackBtn svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .forecastBtn {
+    gap: 15px;
+    font-size: 22px;
+    padding: 16px 28px;
+    margin-bottom: 25px;
+    width: 200px;
+  }
+  .forecastBtn span {
+    font-size: 22px;
+  }
+  .forecastBtn svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+/* ================================ */

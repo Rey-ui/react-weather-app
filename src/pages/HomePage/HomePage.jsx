@@ -8,12 +8,12 @@ import toast, { Toaster } from "react-hot-toast";
 import FilterAndSortCities from "../../components/FilterAndSortCities/FilterAndSortCities";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import css from "./HomePage.module.css";
+const getLocalCitiesList = () => {
+  const userCities = JSON.parse(localStorage.getItem("citiesArr"));
+  if (userCities) return userCities;
+  return [];
+};
 const HomePage = () => {
-  const getLocalCitiesList = () => {
-    const userCities = JSON.parse(localStorage.getItem("citiesArr"));
-    if (userCities) return userCities;
-    return [];
-  };
   const [popularCities, setPopularCities] = useState([]);
   const [citiesList, setCitiesList] = useState(getLocalCitiesList);
   const [filterName, setFilterName] = useState("");
@@ -22,6 +22,7 @@ const HomePage = () => {
   const [citiesListLoader, setCitiesListLoader] = useState(false);
   const [error, setError] = useState(false);
   const [switchIndicator, setswitchIndicator] = useState("asc");
+
   const popularCitiesNames = [
     "kyiv",
     "london",
@@ -32,6 +33,7 @@ const HomePage = () => {
     "rome",
     "singapore",
   ];
+
   useEffect(() => {
     async function getPopularCityWeather() {
       try {
@@ -50,9 +52,11 @@ const HomePage = () => {
     }
     getPopularCityWeather();
   }, []);
+
   useEffect(() => {
     localStorage.setItem("citiesArr", JSON.stringify(citiesList));
   }, [citiesList]);
+
   const handleSearchCity = async (query) => {
     const cityName = query.trim().toLowerCase();
 
@@ -80,6 +84,7 @@ const HomePage = () => {
       setCitiesListLoader(false);
     }
   };
+
   const handledeleteCity = (cityId) => {
     setCitiesList((prev) => {
       return prev.filter((city) => {
@@ -87,6 +92,7 @@ const HomePage = () => {
       });
     });
   };
+
   const handleRefreshWeather = async () => {
     try {
       setCitiesListLoader(true);
@@ -102,13 +108,16 @@ const HomePage = () => {
       setCitiesListLoader(false);
     }
   };
+
   const filterCitiesList = citiesList.filter((city) => {
     return city.name.toLowerCase().includes(filterName.toLowerCase());
   });
+
   const handleClearList = () => {
     localStorage.removeItem("citiesArr");
     setCitiesList([]);
   };
+
   const getSortValue = (city, option) => {
     switch (option) {
       case "cityTemperature":
@@ -123,6 +132,7 @@ const HomePage = () => {
         return null;
     }
   };
+
   const handleSort = (option) => {
     if (sortBy === option) {
       setswitchIndicator((prev) => (prev === "asc" ? "desc" : "asc"));
@@ -131,6 +141,7 @@ const HomePage = () => {
       setswitchIndicator("asc");
     }
   };
+
   const sortedCities = [...filterCitiesList].sort((a, b) => {
     const valueA = getSortValue(a, sortBy);
     const valueB = getSortValue(b, sortBy);
@@ -143,6 +154,7 @@ const HomePage = () => {
     }
     return 0;
   });
+
   return (
     <main>
       <section className="section">

@@ -1,5 +1,19 @@
 .userCitiesList {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
 }
+/* ================================ */
+@media screen and (min-width: 768px) {
+  .userCitiesList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .userCitiesList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+}
+/* ================================ */

@@ -1,22 +1,39 @@
 .refreshBtn {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 18px;
+  gap: 8px;
+  font-size: 16px;
   color: var(--color-surface);
-  /* border: 0.5px solid var(--color-border); */
   background-color: var(--color-primary);
-  padding: 14px 22px;
+  padding: 12px 18px;
   border-radius: 12px;
   font-weight: 600;
   transition: all 250ms;
 }
 .refreshBtn svg {
   stroke: var(--color-surface);
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
 .refreshBtn:hover {
   color: var(--color-accent);
   background-color: #ebedff;
 }
+/* ================================ */
+@media screen and (min-width: 768px) {
+  .refreshBtn {
+    gap: 10px;
+    font-size: 18px;
+    padding: 14px 20px;
+  }
+  .refreshBtn svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .refreshBtn {
+    padding: 14px 22px;
+  }
+}
+/* ================================ */

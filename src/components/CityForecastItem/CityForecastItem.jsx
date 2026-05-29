@@ -17,11 +17,11 @@ const CityForecastItem = ({
       </div>
       <div className={css.forecastCardTemps}>
         <span className={css.forecastCardTemp}>
-          {Math.ceil(tempMax - 273.15)}°
+          {Math.ceil(tempMin - 273.15)}°
         </span>
         <span className={css.forecastCardTempSlash}> | </span>
         <span className={css.forecastCardTemp}>
-          {Math.ceil(tempMin - 273.15)}°
+          {Math.ceil(tempMax - 273.15)}°
         </span>
       </div>
     </>

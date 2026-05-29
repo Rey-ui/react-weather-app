@@ -5,7 +5,6 @@ import { IoMdSpeedometer } from "react-icons/io";
 import { LuSunrise, LuSunset, LuWind } from "react-icons/lu";
 function formatCityTime(unixTime, timezoneOffset) {
   const date = new Date((unixTime + timezoneOffset) * 1000);
-
   const hours = String(date.getUTCHours()).padStart(2, "0");
   const minutes = String(date.getUTCMinutes()).padStart(2, "0");
 

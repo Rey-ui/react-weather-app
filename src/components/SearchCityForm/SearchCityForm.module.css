@@ -1,5 +1,6 @@
 .searchCityForm {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 18px;
   width: 100%;
@@ -9,11 +10,11 @@
   width: 100%;
 }
 .searchCityInput {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--color-secondary);
   background-color: var(--color-surface);
   border: 0.5px solid var(--color-border);
-  padding: 16px 28px;
+  padding: 12px 22px;
   border-radius: 12px;
   width: 100%;
   transition: all 250ms;
@@ -24,20 +25,21 @@
 }
 .searchCityError {
   position: absolute;
-  top: 60px;
+  font-size: 14px;
+  top: 45px;
   left: 0;
   color: red;
 }
 .searchCityBtn {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 18px;
+  gap: 8px;
+  font-size: 16px;
   color: var(--color-surface);
-  /* border: 0.5px solid var(--color-border); */
   background-color: var(--color-primary);
-  padding: 16px 24px;
+  padding: 12px 22px;
   border-radius: 12px;
+  align-self: start;
   font-weight: 600;
   transition: all 250ms;
 }
@@ -46,8 +48,8 @@
   background-color: #ebedff;
 }
 .searchCityBtn svg {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   font-weight: 600;
   stroke: var(--color-surface);
   fill: var(--color-surface);
@@ -57,5 +59,52 @@
   stroke: var(--color-accent);
   fill: var(--color-accent);
 }
-.searchCityBtnText {
+
+/* ================================ */
+@media screen and (min-width: 768px) {
+  .searchCityForm {
+    flex-direction: row;
+  }
+
+  .searchCityInput {
+    font-size: 18px;
+    padding: 14px 24px;
+  }
+  .searchCityError {
+    top: 55px;
+  }
+  .searchCityBtn {
+    gap: 10px;
+    font-size: 18px;
+    padding: 14px 24px;
+  }
+  .searchCityBtn svg {
+    width: 25px;
+    height: 25px;
+  }
 }
+@media screen and (min-width: 1280px) {
+  .searchCityForm {
+    gap: 18px;
+  }
+
+  .searchCityInput {
+    font-size: 18px;
+    padding: 16px 28px;
+  }
+
+  .searchCityError {
+    top: 60px;
+  }
+  .searchCityBtn {
+    gap: 10px;
+    font-size: 18px;
+    padding: 16px 24px;
+  }
+
+  .searchCityBtn svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+/* ================================ */

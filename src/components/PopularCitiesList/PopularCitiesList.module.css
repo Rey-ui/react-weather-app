@@ -1,12 +1,12 @@
 .popularList {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   overflow-x: auto;
-  padding: 20px;
+  padding: 15px;
 }
 .popularList::-webkit-scrollbar {
-  height: 10px;
+  height: 5px;
 }
 .popularList::-webkit-scrollbar-track {
   background: var(--color-bg);
@@ -15,3 +15,20 @@
   background: var(--color-border);
   border-radius: 4px;
 }
+/* ================================ */
+@media screen and (min-width: 768px) {
+  .popularList {
+    gap: 20px;
+    padding: 15px;
+  }
+  .popularList::-webkit-scrollbar {
+    height: 10px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .popularList {
+    gap: 20px;
+    padding: 20px;
+  }
+}
+/* ================================ */

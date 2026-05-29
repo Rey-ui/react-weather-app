@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   /* gap: 20px; */
-  padding: 20px 40px;
+  padding: 15px;
   background-color: var(--color-surface);
   box-shadow: var(--shadow-card);
   border-radius: var(--radius-main);
@@ -11,9 +11,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 15px;
   border-bottom: 0.5px solid var(--color-border);
 }
 .forecastItem:last-child {
   border-bottom: none;
 }
+/* ================================ */
+@media screen and (min-width: 768px) {
+  .forecastItem {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .forecastList {
+    padding: 20px 40px;
+  }
+}
+/* ================================ */

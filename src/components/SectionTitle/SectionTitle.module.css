@@ -1,5 +1,5 @@
 .sectionTitle {
-  font-size: var(--section-title-desk);
+  font-size: var(--section-title-mob);
   color: var(--color-secondary);
   font-weight: 100;
   text-align: start;
@@ -7,3 +7,17 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
+/* ================================ */
+@media screen and (min-width: 768px) {
+  .sectionTitle {
+    font-size: var(--section-title-tab);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .sectionTitle {
+    font-size: var(--section-title-desk);
+
+    margin-bottom: 25px;
+  }
+}
+/* ================================ */

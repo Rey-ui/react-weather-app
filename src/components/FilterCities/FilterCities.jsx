@@ -13,5 +13,4 @@ const FilterCities = ({ value, change }) => {
     </label>
   );
 };
-
 export default FilterCities;
