@@ -1,7 +1,6 @@
 .forecastList {
   display: flex;
   flex-direction: column;
-  /* gap: 20px; */
   padding: 15px;
   background-color: var(--color-surface);
   box-shadow: var(--shadow-card);

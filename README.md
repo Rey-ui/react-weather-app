@@ -1,16 +1,49 @@
-# React + Vite
+# 🌤️ HyperClimate — Weather Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern weather tracking app built with React, featuring real-time weather data, city management, and 5-day forecasts.
 
-Currently, two official plugins are available:
+🔗 [Live Demo](https://react-weather-app-zeta-ebon.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Popular cities with live weather data
+- Add and track your own cities
+- Delete cities from your list
+- Refresh weather data for all tracked cities
+- Filter cities by name
+- Sort by temperature, humidity, wind speed, or name
+- Persistent storage via localStorage
+- 5-day weather forecast per city
+- Detailed city page with humidity, pressure, wind, sunrise/sunset
+- Fully responsive design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 18
+- React Router DOM v6
+- Axios
+- Formik + Yup
+- CSS Modules
+- React Hot Toast
+- React Icons
+- Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+1. Clone the repository
+2. Create `.env` file:
+3. Install dependencies:
+
+```bash
+   npm install
+```
+
+4. Run the project:
+
+```bash
+   npm run dev
+```
+
+## API
+
+Uses [OpenWeatherMap API](https://openweathermap.org/api) for weather data.

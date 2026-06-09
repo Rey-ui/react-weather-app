@@ -20,7 +20,6 @@ const FilterAndSortCities = ({
           <FilterCities value={value} change={change} />
           <div>
             <h3 className={css.citiesBarSortTitle}>Sort By</h3>
-
             <SortCitiesList
               sortValue={sortValue}
               sort={sort}
