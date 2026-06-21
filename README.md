@@ -1,49 +1,89 @@
-# 🌤️ HyperClimate — Weather Tracker
+# HyperClimate — Weather Tracker
 
-A modern weather tracking app built with React, featuring real-time weather data, city management, and 5-day forecasts.
+A weather tracking application built with React that allows users to manage cities, view detailed weather information, and track 5-day forecasts.
 
-🔗 [Live Demo](https://react-weather-app-zeta-ebon.vercel.app/)
+## 🚀 Live Demo
+
+https://react-weather-app-zeta-ebon.vercel.app/
 
 ## Features
 
-- Popular cities with live weather data
-- Add and track your own cities
-- Delete cities from your list
-- Refresh weather data for all tracked cities
-- Filter cities by name
-- Sort by temperature, humidity, wind speed, or name
-- Persistent storage via localStorage
-- 5-day weather forecast per city
-- Detailed city page with humidity, pressure, wind, sunrise/sunset
-- Fully responsive design
+- Popular cities section
+- Add and manage custom cities
+- City search functionality
+- Sorting by:
+  - Name
+  - Temperature
+  - Humidity
+  - Wind speed
 
-## Tech Stack
+- Refresh weather data
+- Detailed city page
+- 5-day weather forecast
+- Local storage persistence
+- Form validation
+- Loading and error states
+- Responsive design
 
-- React 18
-- React Router DOM v6
+## 🛠️ Tech Stack
+
+- React
+- React Router
 - Axios
-- Formik + Yup
+- Formik
+- Yup
 - CSS Modules
 - React Hot Toast
 - React Icons
+- React Spinners
+- clsx
 - Vite
 
-## Getting Started
+## What I Practiced
 
-1. Clone the repository
-2. Create `.env` file:
-3. Install dependencies:
+This project was created to strengthen:
+
+- React fundamentals
+- State management with React hooks
+- Component composition
+- Routing and navigation
+- API integration
+- Form validation
+- Persistent application state
+- Error handling
+- Frontend application architecture
+
+## Installation
 
 ```bash
-   npm install
+git clone https://github.com/Rey-ui/react-weather-app.git
+
+cd react-weather-app
+
+npm install
+
+npm run dev
 ```
 
-4. Run the project:
+## Environment Variables
 
-```bash
-   npm run dev
+Create a `.env` file and add your OpenWeather API key.
+
+## 📁 Project Structure
+
+```text
+src/
+ ├── components/
+ ├── pages/
+ ├── services/
+ ├── api/
+ ├── utils/
+ ├── App.jsx
+ └── main.jsx
 ```
 
-## API
+## Author
 
-Uses [OpenWeatherMap API](https://openweathermap.org/api) for weather data.
+Andrii Trubchaninov
+
+Frontend Developer
